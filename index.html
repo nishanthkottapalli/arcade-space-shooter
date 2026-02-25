@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Arcade Space Shooter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/ui.css" />
+</head>
+<body>
+  <div class="game-container" id="gameRoot" data-phase="arcade">
+    <!-- Parallax background is constrained to the viewport (game-container) -->
+    <div class="bg-layer" aria-hidden="true">
+      <div class="bg bg-back"></div>
+      <div class="bg bg-far"></div>
+      <div class="bg bg-stars"></div>
+    </div>
+
+    <canvas class="game-canvas" id="gameCanvas" width="352" height="198"></canvas>
+    <canvas class="overlay-canvas" id="overlayCanvas" width="352" height="198"></canvas>
+
+    <!-- Minimal shooter HUD -->
+    <div class="ui-layer ui-shooter" id="uiLayer">
+      <div class="topbar">
+        <div class="topbar-left">
+          <span class="pill" id="scorePill">SCORE: 0</span>
+          <span class="pill" id="wavePill">WAVE: 1</span>
+          <span class="pill" id="livesPill">LIVES: 3</span>
+        </div>
+        <div class="topbar-right">
+          <span class="pill" id="shipPill">SHIP: tinyShip3</span>
+          <button class="small-btn" id="pauseBtn" title="Pause (P)">PAUSE</button>
+          <button class="small-btn" id="restartBtn" title="Restart (R)">RESTART</button>
+        </div>
+      </div>
+
+      <div class="hintbar" id="hintBar">
+        <span class="hint">← / → : move</span>
+        <span class="hint">Space : shoot</span>
+        <span class="hint">P : pause</span>
+        <span class="hint">R : restart</span>
+      </div>
+
+      <!-- Touch controls (shown only on coarse pointers) -->
+      <div class="touch-controls" aria-hidden="true">
+        <button class="touch-btn" id="touchLeft">◀</button>
+        <button class="touch-btn" id="touchRight">▶</button>
+        <button class="touch-btn" id="touchShoot">●</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-hint">
+    Arcade Space Shooter
+  </div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/sim.js"></script>
+  <script src="js/renderers.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/init.js"></script>
+</body>
+</html>
