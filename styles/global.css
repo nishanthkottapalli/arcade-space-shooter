@@ -1,0 +1,114 @@
+:root{
+  --bg:#0b0f1a;
+  --frame:#1a2440;
+  --frame2:#0f1630;
+  --accent:#7fc2ff;
+  --text:#e8f0ff;
+  --muted:#a9b6d3;
+  --good:#63ff8a;
+  --bad:#ff6b6b;
+  --warn:#ffd166;
+}
+
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.silkscreen-regular {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*{box-sizing:border-box;}
+body{
+  background:#111;
+  margin:0;
+  padding:0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, "Press Start 2P", system-ui, "Silkscreen", sans-serif;
+  color:var(--text);
+  overflow:hidden;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.game-container{
+  position:relative;
+  width:352px;
+  height:198px;
+  margin:0 auto;
+  outline:1px solid rgba(255,255,255,0.25);
+  background:transparent;
+  /* Scale is applied dynamically via JS for responsive fit */
+  transform: scale(1);
+  transform-origin: center;
+}
+
+
+
+.bg-layer{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  pointer-events:none;
+  image-rendering: pixelated;
+}
+.bg-layer .bg{
+  position:absolute;
+  /* overscan for parallax */
+  inset:-40px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  opacity:0.95;
+}
+.bg-back{
+  background-image: url("../assets/backgrounds/blue-back.png");
+  animation: bgDrift 28s linear infinite;
+}
+.bg-far{
+  background-image: url("../assets/backgrounds/far-planets.png");
+  animation: bgDrift 52s linear infinite;
+  opacity:0.9;
+}
+.bg-stars{
+  background-image: url("../assets/backgrounds/stars.png");
+  animation: bgDrift 18s linear infinite;
+  opacity:0.85;
+  mix-blend-mode: screen;
+}
+
+@keyframes bgDrift{
+  from { background-position: 0px 0px; }
+  to   { background-position: -272px 160px; }
+}
+
+.game-container[data-phase="expansion"] .bg-layer{ filter: saturate(1.05) brightness(1.00); }
+.game-container[data-phase="contraction"] .bg-layer{ filter: hue-rotate(35deg) saturate(0.95) brightness(0.92); }
+.game-container[data-phase="bounce"] .bg-layer{ filter: hue-rotate(-20deg) saturate(1.15) brightness(1.05); }
+
+
+.game-canvas, .overlay-canvas{
+  position:absolute;
+  inset:0;
+  image-rendering: pixelated;
+}
+
+.overlay-canvas{
+  pointer-events:none;
+}
+
+.footer-hint{
+  position:fixed;
+  left:0; right:0;
+  bottom:10px;
+  text-align:center;
+  font-size:12px;
+  color:#fff;
+  opacity:0.85;
+  pointer-events:none;
+}

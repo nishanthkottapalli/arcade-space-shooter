@@ -1,0 +1,291 @@
+.ui-layer{
+  position:absolute;
+  inset:0;
+  /* enable pointer events selectively on controls */
+  pointer-events:none;
+}
+
+.topbar{
+  position:absolute;
+  left:6px; right:6px; top:-20px;
+  display:flex;
+  justify-content:space-between;
+  gap:8px;
+  pointer-events:none;
+  visibility: hidden;;
+}
+
+.topbar-left, .topbar-right{
+  position: relative;
+  top: -45px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:3px 6px;
+  border:1px solid rgba(127,194,255,0.35);
+  background:rgba(15,22,48,0.84);
+  background-image:url("../assets/ui/honeycomb.png");
+  background-size:180px 180px;
+  background-blend-mode: overlay;
+  border-radius:6px;
+  font-size:11px;
+  letter-spacing:0.4px;
+}
+
+.bar{
+  width:72px;
+  height:10px;
+  border:1px solid rgba(255,255,255,0.22);
+  border-radius:6px;
+  overflow:hidden;
+  background:rgba(0,0,0,0.25);
+}
+.bar-fill{
+  height:100%;
+  width:0%;
+  background:rgba(255,209,102,0.9);
+}
+
+.leftpanel{
+  position:absolute;
+  left:6px;
+  top:34px;
+  width:116px;
+  padding:6px;
+  border:1px solid rgba(127,194,255,0.25);
+  background:rgba(15,22,48,0.84);
+  background-image:url("../assets/ui/honeycomb.png");
+  background-size:180px 180px;
+  background-blend-mode: overlay;
+  border-radius:8px;
+  pointer-events:auto;
+  visibility: hidden;
+}
+
+.panel-title{
+  font-size:10px;
+  color:var(--muted);
+  margin:2px 0 4px;
+}
+.panel-title.mt{ margin-top:8px; }
+
+.tool-btn, .small-btn, .action-btn{
+  width:100%;
+  text-align:left;
+  padding:5px 6px;
+  margin:2px 0;
+  border-radius:6px;
+  border:1px solid rgba(255,255,255,0.18);
+  background:rgba(0,0,0,0.25);
+  color:var(--text);
+  font-size:11px;
+  cursor:pointer;
+}
+
+.tool-btn{ position:relative; padding-left:22px; }
+.tool-btn::before{
+  content:"";
+  position:absolute;
+  left:6px;
+  top:50%;
+  transform:translateY(-50%);
+  width:12px; height:12px;
+  background-size:contain;
+  background-repeat:no-repeat;
+  image-rendering: pixelated;
+  opacity:0.95;
+}
+.tool-btn[data-tool="probe"]::before{ background-image:url("../assets/icons/telescope.png"); }
+.tool-btn[data-tool="bias"]::before{ background-image:url("../assets/icons/spiral.png"); }
+.tool-btn[data-tool="quench"]::before{ background-image:url("../assets/icons/hand.png"); }
+.tool-btn[data-tool="warp"]::before{ background-image:url("../assets/icons/warp.png"); }
+.tool-btn[data-tool="bounce"]::before{ background-image:url("../assets/icons/missile.png"); }
+
+
+.tool-btn.is-selected, .small-btn.is-selected{
+  border-color:rgba(127,194,255,0.7);
+  background:rgba(127,194,255,0.12);
+}
+
+.tool-btn:hover, .small-btn:hover, .action-btn:hover{
+  border-color:rgba(127,194,255,0.6);
+}
+
+.toggle{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:10px;
+  color:var(--text);
+  margin:3px 0;
+}
+.toggle input{ transform:translateY(1px); }
+
+.speed-row{
+  display:flex;
+  gap:4px;
+}
+.speed-row .small-btn{
+  width:auto;
+  flex:1;
+  text-align:center;
+  padding:4px 0;
+  font-size:10px;
+}
+
+.small-btn.wide{
+  text-align:center;
+}
+
+.bottompanel{
+  position:absolute;
+  left:130px;
+  right:6px;
+  bottom:6px;
+  height:56px;
+  display:flex;
+  gap:8px;
+  padding:6px;
+  border:1px solid rgba(127,194,255,0.25);
+  background:rgba(15,22,48,0.84);
+  background-image:url("../assets/ui/honeycomb.png");
+  background-size:180px 180px;
+  background-blend-mode: overlay;
+  border-radius:8px;
+  pointer-events:auto;
+  visibility: hidden;
+}
+
+.stats{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex:1;
+}
+.stat{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  min-width:78px;
+}
+.label{
+  font-size:9px;
+  color:var(--muted);
+}
+.value{
+  font-size:12px;
+}
+.value.good{ color:var(--good); }
+.value.bad{ color:var(--bad); }
+
+.charts{
+  display:flex;
+  gap:6px;
+  align-items:center;
+}
+.charts canvas{
+  border:1px solid rgba(255,255,255,0.16);
+  border-radius:6px;
+  background:rgba(0,0,0,0.22);
+}
+
+.actions{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+}
+.action-btn{
+  width:auto;
+  text-align:center;
+  padding:8px 10px;
+  font-weight:700;
+  letter-spacing:0.4px;
+  border-color:rgba(255,209,102,0.45);
+  background:rgba(255,209,102,0.12);
+}
+
+/* =============================
+   Shooter UI overrides
+   ============================= */
+
+.ui-layer.ui-shooter{ pointer-events:none; }
+.ui-layer.ui-shooter .topbar{
+  top:6px;
+  visibility: visible;
+  pointer-events:none;
+}
+.ui-layer.ui-shooter .topbar-right{
+  pointer-events:auto;
+}
+
+/* Buttons inside topbar */
+.ui-layer.ui-shooter .small-btn{
+  width:auto;
+  text-align:center;
+  padding:4px 8px;
+  font-size:10px;
+  border-radius:8px;
+  pointer-events:auto;
+}
+
+/* Hide old sim panels if any remain in DOM (safety) */
+.ui-layer.ui-shooter .leftpanel,
+.ui-layer.ui-shooter .bottompanel{ display:none !important; }
+
+.hintbar{
+  position:absolute;
+  left:6px;
+  right:6px;
+  bottom:-26px;
+  display:flex;
+  justify-content:space-between;
+  gap:8px;
+  padding:5px 8px;
+  border:1px solid rgba(127,194,255,0.25);
+  background:rgba(15,22,48,0.72);
+  background-image:url("../assets/ui/honeycomb.png");
+  background-size:180px 180px;
+  background-blend-mode: overlay;
+  border-radius:10px;
+  font-size:10px;
+  color:var(--muted);
+  pointer-events:none;
+}
+.hintbar .hint{ white-space:nowrap; }
+
+.touch-controls{
+  position:absolute;
+  left:6px;
+  right:6px;
+  bottom:-100px;
+  display:none;
+  justify-content:space-between;
+  gap:10px;
+  pointer-events:auto;
+}
+.touch-btn{
+  flex:1;
+  height:90px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.20);
+  background:rgba(0,0,0,0.28);
+  color:var(--text);
+  font-size:16px;
+  cursor:pointer;
+  user-select:none;
+  -webkit-tap-highlight-color: transparent;
+}
+.touch-btn:active{
+  border-color:rgba(127,194,255,0.75);
+  background:rgba(127,194,255,0.14);
+}
+
+@media (pointer: coarse){
+  .touch-controls{ display:flex; }
+}
