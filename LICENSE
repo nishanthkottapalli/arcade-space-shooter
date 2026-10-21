@@ -1,31 +1,56 @@
 Arcade Space Shooter - PROPRIETARY LICENSE (ALL RIGHTS RESERVED)
-Version 0.1 - Effective date: 2026-02-23
+Version 1.0 - Effective date: 2026-10-21
 
-Copyright (c) 2026 Nishanth Kottapalli.
-All rights reserved.
+# Proprietary Software and Content Notice
 
-Project Title:
-  Arcade Space Shooter - A friendly vanilla JavaScript 2D game for the web (the "Game")
+Project context: Personal software and website repositories.
+Related website or account: nishanthkottapalli.com, nishanthkottapalli.itch.io, github.com/nishanthkottapalli.
 
-Ownership / Attribution:
+The source code, visual identity, logos, written content, and media in this repository may not be copied, redistributed, modified, or used without prior written permission from the copyright holder.
+
+## Scope and rights reserved
+
+This notice applies only to original material owned by the copyright holder identified above (the "Covered Material"). Separately identified third-party material, customer-owned material, and material carrying another licence are excluded.
+
+Except as permitted by applicable law, applicable hosting-platform terms, or a separate written licence from the relevant rights holder, no permission is granted to use, execute, reproduce, modify, distribute, sublicense, sell, or otherwise exploit the Covered Material. All rights not expressly granted are reserved.
+
+Public availability, repository membership, access credentials, delivery of a build, or deployment does not by itself grant a commercial licence or transfer ownership. Any rights arising under applicable hosting-platform terms remain unaffected.
+
+## Separate agreements
+
+Permissions granted under a valid separate written agreement remain governed by that agreement. This notice does not grant operational rights to PLAKC, PLAKC.SPACE, ROImantics, their customers, or any other person. It does not represent that any proposed master agreement has been signed.
+
+A change of repository account, organisation, domain, registrar, DNS operator, or service administrator does not by itself change copyright ownership. Existing third-party rights and contractual rights are unaffected.
+
+## Third-party and separately licensed material
+
+Third-party components retain their respective owners, notices and licences. This notice does not restrict permissions granted by those licences. Preserve required notices and comply with all applicable distribution and source-availability obligations.
+
+Any educational example with a separate explicit licence is governed by that licence for its designated scope. Free access to a page or demonstration alone does not grant reuse rights.
+
+## Trademarks and service access
+
+No trademark licence or entitlement to hosted services, accounts, credentials, customer data, support, or updates is granted by this notice.
+
+## Disclaimer
+
+To the extent permitted by applicable law, the Covered Material is provided "AS IS", without warranties of any kind, express or implied. Liability and warranties under a separately executed agreement remain governed by that agreement. Nothing here excludes rights or liabilities that cannot lawfully be excluded.
+
+## Game 
+Arcade Space Shooter - A friendly vanilla JavaScript 2D game for the web (the "Game")
+
+### Ownership / Attribution:
   The Game is authored and owned by Nishanth Kottapalli ("Owner"),
   developed under nishanthkottapalli.com as Arcade Space Shooter based on the Baryogeneis Simulator developed at TF-141 Labs.
 
-Scope:
+### Scope:
   This repository, including all source code, game architecture, runtime systems,
   tooling, documentation, examples, templates, demos, shaders, UI systems,
   data formats, build scripts, and any bundled assets (collectively, the "Software"),
   is proprietary and confidential to the Owner unless explicitly stated otherwise
   in writing.
 
-Permissions:
-  You are permitted to:
-  1) Use the Game in compiled/minified/bundled form for personal evaluation,
-     testing, and demonstration purposes.
-  2) View the source code for the limited purpose of evaluating the Game.
-  3) Run included samples/demos locally solely to evaluate Game behavior.
-
-Public Demos Exception (GitHub Pages / Web Demo / Playground / itch.io ):
+### Public Demos Exception (GitHub Pages / Web Demo / Playground / itch.io ):
   The Owner may publish interactive demos or documentation for Arcade Space Shooter via a public website
   (including but not limited to GitHub Pages/itch.io) (the "Public Demo"). You are permitted to access and use
   the Public Demo for personal, non-commercial evaluation.
@@ -37,7 +62,7 @@ Public Demos Exception (GitHub Pages / Web Demo / Playground / itch.io ):
   - reuse engine subsystems, APIs, data formats, documentation text, or UI layouts
     beyond what is allowed under "Permissions" above.
 
-Restrictions (No Rights Granted):
+### Restrictions (No Rights Granted):
   Except as expressly permitted above, you may NOT, without prior written
   permission from the Owner:
   - Copy, reproduce, redistribute, publish, or sublicense the Software
@@ -51,13 +76,13 @@ Restrictions (No Rights Granted):
     beyond what is visible in the source repository
   - Remove, alter, or obscure any copyright, trademark, or attribution notices
 
-Commercial Use:
+### Commercial Use:
   Commercial use of Arcade Space Shooter (including use in client work, internal business tools, paid
   products, monetized games, ads-supported deployments, or SaaS offerings) is NOT
   permitted under this license without a separate written commercial license from
   the Owner.
 
-Trademarks:
+### Trademarks:
   "Arcade Space Shooter", and "nishanthkottapalli.com", along with all associated logos,
   marks, and brand identifiers, are trademarks/service marks of the Owner and/or their
   respective owners.
@@ -67,19 +92,19 @@ Trademarks:
   any derivative or competing product, except to truthfully reference the Engine in
   reviews, commentary, or non-commercial discussion.
 
-Third-Party Components:
+### Third-Party Components:
   This Software may use third-party libraries and/or assets (including dependencies
   delivered via CDN, npm, or vendored code). Such components are licensed under their
   respective terms and are NOT covered by this proprietary license.
   See THIRD_PARTY_NOTICES.md (if present) for details.
 
-Contributions:
+### Contributions:
   Unless the Owner explicitly agrees otherwise in writing, any contribution, patch,
   suggestion, or code submitted to the project is deemed to be provided under terms
   that assign all rights, title, and interest in that contribution to the Owner,
   with no additional compensation owed.
 
-No Warranty:
+### No Warranty:
   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
   INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
   PARTICULAR PURPOSE, AND NON-INFRINGEMENT. IN NO EVENT SHALL THE OWNER BE LIABLE
@@ -87,12 +112,14 @@ No Warranty:
   OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE
   OR OTHER DEALINGS IN THE SOFTWARE.
 
-Termination:
+### Termination:
   Any violation of this license automatically terminates the permissions granted
   herein. Upon termination, you must cease all use of the Software and destroy any
   copies in your possession or control.
 
-Contact:
+## Contact:
   For permissions, licensing, commercial use, publishing rights, or acquisition inquiries:
   Nishanth Kottapalli (Owner)
   nishanthkottapalli.com
+
+
